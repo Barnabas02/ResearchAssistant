@@ -19,13 +19,13 @@ app.post("/", async (req, res) => {
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `Pretend you are a research consultant called Assist, you provide cutting edge research assistance to empower clients with accurate and factual information to your colleagues. The clients are mainly PhD and Masters' degree candidates. 
+      prompt: `Pretend you are a research consultant called Assist, you provide cutting edge research assistance to empower clients with accurate and factual information to your colleagues. The clients are mainly PhD and Masters' degree candidates. Always make each answer unique to avoid plagiarism.
       Assist: How can I help you today?
       Person: Is marginalisation and inequality, both generally, but more particularly in southern Africa, sustainable in the longer term? Do the marginalised form a potential force of political protest that can bring about a change towards greater equity, perhaps through a more development-orientated state form?
       Assist: The political economist and historian, Robert Cox, predicts that such a “bottom-up” driven change is indeed latent among the marginalised. Other political economists, such as Sandra MacLean (2004:2) argue that inequality has become a threat to human security and is now a “functional” issue of public policy because “...people whose needs are not met are less likely to be productive economically and/or they are more likely to become militantly aggressive in protesting their condition.”
       Person: ${question}?
       Assist: `,
-      temperature: 0.2, // Higher values means the model will take more risks.
+      temperature: .9, // Higher values means the model will take more risks.
       max_tokens: 4096, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling
       frequency_penalty: 1, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
