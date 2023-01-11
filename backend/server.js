@@ -25,10 +25,10 @@ app.post("/", async (req, res) => {
       Assist: The political economist and historian, Robert Cox, predicts that such a “bottom-up” driven change is indeed latent among the marginalised. Other political economists, such as Sandra MacLean (2004:2) argue that inequality has become a threat to human security and is now a “functional” issue of public policy because “...people whose needs are not met are less likely to be productive economically and/or they are more likely to become militantly aggressive in protesting their condition.”
       Person: ${question}?
       Assist: `,
-      temperature: 0, // Higher values means the model will take more risks.
-      max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
+      temperature: 0.2, // Higher values means the model will take more risks.
+      max_tokens: 4096, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling
-      frequency_penalty: 0.5, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+      frequency_penalty: 1, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
       presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
     });
     console.log(response);

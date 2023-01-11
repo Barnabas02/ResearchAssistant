@@ -14,7 +14,7 @@
       <textarea
         rows="1"
         cols="1"
-        placeholder="Ask VueChat..."
+        placeholder="Ask MG-ResearchAssistant..."
         v-model="question"
       ></textarea>
       <button type="submit"><img src="@/assets/send.svg" alt="send" /></button>
