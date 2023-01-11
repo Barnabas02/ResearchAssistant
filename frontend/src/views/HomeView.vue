@@ -41,6 +41,7 @@ const fetchAnswer = async () => {
       isAi: true,
       value: "Loading...",
     });
+    // http://localhost:8000
     const res = await fetch("https://research-assistant.onrender.com", {
       method: "POST",
       headers: {
